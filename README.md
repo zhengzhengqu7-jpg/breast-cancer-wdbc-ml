@@ -1,4 +1,4 @@
-# Breast Cancer Diagnosis (WDBC) — End-to-End ML Pipeline
+# Breast Cancer Diagnosis (WDBC) - End-to-End ML Pipeline
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)

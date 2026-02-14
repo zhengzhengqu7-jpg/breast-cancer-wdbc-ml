@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "Breast Cancer Diagnosis (WDBC) — End-to-End ML Pipeline"
+title: "Breast Cancer Diagnosis (WDBC) - End-to-End ML Pipeline"
 message: "If you use this project, please cite it."
 type: software
 authors:

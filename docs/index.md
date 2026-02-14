@@ -1,10 +1,27 @@
 ---
 layout: default
-title: "Breast Cancer WDBC — ML Classification"
+title: "Breast Cancer WDBC - ML Classification"
 description: "Supervised learning pipeline for binary classification of breast tumors using the Wisconsin Diagnostic Breast Cancer dataset"
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+
+<div class="portfolio-banner">
+  <div class="portfolio-content">
+    <div class="portfolio-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </div>
+    <div class="portfolio-text">
+      <p class="portfolio-label">About the Author</p>
+      <h3 class="portfolio-name">Taimisson</h3>
+      <p class="portfolio-desc">Software Developer &amp; Data Science Enthusiast - explore more projects, skills, and contact info on my portfolio.</p>
+    </div>
+    <a href="https://taimisson.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-button">
+      Visit Portfolio
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+    </a>
+  </div>
+</div>
 
 <div class="hero-section">
   <h1>Breast Cancer Diagnosis via Supervised Learning</h1>
@@ -21,7 +38,7 @@ description: "Supervised learning pipeline for binary classification of breast t
 
 ## Abstract
 
-This project implements an end-to-end supervised classification pipeline applied to the Wisconsin Diagnostic Breast Cancer (WDBC) dataset (Wolberg et al., 1995). The dataset comprises 569 observations with 30 numeric features derived from digitized images of fine needle aspirate (FNA) cytology samples. Each feature describes morphological properties of cell nuclei — including radius, texture, perimeter, area, smoothness, compactness, concavity, symmetry, and fractal dimension — computed as mean, standard error, and worst-case values.
+This project implements an end-to-end supervised classification pipeline applied to the Wisconsin Diagnostic Breast Cancer (WDBC) dataset (Wolberg et al., 1995). The dataset comprises 569 observations with 30 numeric features derived from digitized images of fine needle aspirate (FNA) cytology samples. Each feature describes morphological properties of cell nuclei - including radius, texture, perimeter, area, smoothness, compactness, concavity, symmetry, and fractal dimension - computed as mean, standard error, and worst-case values.
 
 The pipeline encompasses exploratory data analysis, multicollinearity-based feature selection, standardization, and comparative evaluation of Logistic Regression and Random Forest classifiers. The best-performing model (Logistic Regression) achieved **96.5% accuracy** and **97.5% precision** for the malignant class on the held-out test set.
 
@@ -152,16 +169,16 @@ The analysis follows a structured six-stage pipeline:
 
 <div class="note-box">
   <h4>Clinical Relevance of Recall</h4>
-  <p>In diagnostic screening, recall (sensitivity) for the malignant class is particularly important: a false negative — classifying a malignant tumor as benign — carries significantly higher clinical risk than a false positive. Logistic Regression achieved 92.9% recall, reducing the probability of missed malignant diagnoses.</p>
+  <p>In diagnostic screening, recall (sensitivity) for the malignant class is particularly important: a false negative - classifying a malignant tumor as benign - carries significantly higher clinical risk than a false positive. Logistic Regression achieved 92.9% recall, reducing the probability of missed malignant diagnoses.</p>
 </div>
 
 ### Key Predictive Features
 
 Feature importance analysis identified the following morphological descriptors as the strongest predictors of malignancy:
 
-1. **Concave points** (mean and worst) — captures the number of concave portions of the cell nucleus contour, a known indicator of irregular cell morphology
-2. **Radius measurements** (mean and worst) — reflects overall nucleus size, which tends to be larger in malignant cells
-3. **Concavity metrics** — quantifies the severity of concave portions, correlating with irregular nuclear shape
+1. **Concave points** (mean and worst) - captures the number of concave portions of the cell nucleus contour, a known indicator of irregular cell morphology
+2. **Radius measurements** (mean and worst) - reflects overall nucleus size, which tends to be larger in malignant cells
+3. **Concavity metrics** - quantifies the severity of concave portions, correlating with irregular nuclear shape
 
 These findings are consistent with established cytopathological criteria, where nuclear size and shape irregularity are primary indicators of malignancy (Wolberg et al., 1995).
 
@@ -209,12 +226,12 @@ These findings are consistent with established cytopathological criteria, where 
 <div class="viz-grid">
   <div class="viz-item">
     <img src="assets/img/viz_07.png" alt="Confusion matrix for Logistic Regression classifier">
-    <p class="viz-caption"><strong>Fig. 6.</strong> Confusion matrix — Logistic Regression. 3 false negatives and 2 false positives on the test set (n=143).</p>
+    <p class="viz-caption"><strong>Fig. 6.</strong> Confusion matrix - Logistic Regression. 3 false negatives and 2 false positives on the test set (n=143).</p>
   </div>
 
   <div class="viz-item">
     <img src="assets/img/viz_08.png" alt="Confusion matrix for Random Forest classifier">
-    <p class="viz-caption"><strong>Fig. 7.</strong> Confusion matrix — Random Forest. 5 false negatives and 1 false positive on the test set (n=143).</p>
+    <p class="viz-caption"><strong>Fig. 7.</strong> Confusion matrix - Random Forest. 5 false negatives and 1 false positive on the test set (n=143).</p>
   </div>
 </div>
 
@@ -242,7 +259,7 @@ These findings are consistent with established cytopathological criteria, where 
     <li><strong>Language:</strong> Python 3.8+</li>
     <li><strong>Core libraries:</strong> pandas, NumPy, matplotlib, seaborn, scikit-learn</li>
     <li><strong>Data source:</strong> <code>ucimlrepo</code> (UCI ML Repository API)</li>
-    <li><strong>Scaling:</strong> <code>StandardScaler</code> — zero mean, unit variance normalization</li>
+    <li><strong>Scaling:</strong> <code>StandardScaler</code> - zero mean, unit variance normalization</li>
     <li><strong>Train/test split:</strong> 75/25, stratified, <code>random_state=42</code></li>
   </ul>
 </div>
@@ -307,7 +324,7 @@ breast-cancer-wdbc-ml/
 ## References
 
 - Wolberg, W. H., Street, W. N., & Mangasarian, O. L. (1995). *Image analysis and machine learning applied to breast cancer diagnosis and prognosis.* Analytical and Quantitative Cytology and Histology, 17(2), 77–87.
-- UCI Machine Learning Repository — [Breast Cancer Wisconsin (Diagnostic)](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
+- UCI Machine Learning Repository - [Breast Cancer Wisconsin (Diagnostic)](https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic)
 - World Health Organization (2024). *Breast Cancer Fact Sheet.* [who.int](https://www.who.int/news-room/fact-sheets/detail/breast-cancer)
 
 ---
@@ -327,24 +344,7 @@ Licensed under the MIT License. See [LICENSE](https://github.com/Taimisson/breas
 
 ---
 
-<div class="portfolio-banner">
-  <div class="portfolio-content">
-    <div class="portfolio-icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-    </div>
-    <div class="portfolio-text">
-      <p class="portfolio-label">About the Author</p>
-      <h3 class="portfolio-name">Taimisson</h3>
-      <p class="portfolio-desc">Software Developer &amp; Data Science Enthusiast — explore more projects, skills, and contact info on my portfolio.</p>
-    </div>
-    <a href="https://taimisson.vercel.app/" target="_blank" rel="noopener noreferrer" class="portfolio-button">
-      Visit Portfolio
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-    </a>
-  </div>
-</div>
-
 <div class="footer-section">
   <p>Built with Python, scikit-learn, and Jupyter</p>
-  <p>Dataset: Wisconsin Diagnostic Breast Cancer (WDBC) — UCI Machine Learning Repository</p>
+  <p>Dataset: Wisconsin Diagnostic Breast Cancer (WDBC) - UCI Machine Learning Repository</p>
 </div>
