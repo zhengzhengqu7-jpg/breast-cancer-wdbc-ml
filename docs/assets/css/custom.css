@@ -90,12 +90,13 @@ hr {
 /* === Portfolio Banner (Top) === */
 .portfolio-banner {
   margin: -1.5rem 0 2rem 0;
-  background: linear-gradient(135deg, rgba(232, 115, 138, 0.55) 0%, rgba(240, 160, 181, 0.5) 50%, rgba(245, 190, 205, 0.45) 100%);
+  background: rgba(245, 200, 215, 0.15);
+  border: 1px solid rgba(210, 145, 168, 0.15);
   border-radius: 8px;
   padding: 1.25rem 2rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(194, 24, 91, 0.08);
+  box-shadow: none;
   backdrop-filter: blur(4px);
 }
 
