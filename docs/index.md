@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
     var img = document.createElement('img');
     img.src = '{{ "/assets/img/github.png" | relative_url }}';
     img.alt = 'View on GitHub';
+    img.style.height = '28px';
+    img.style.width = 'auto';
+    img.style.maxWidth = '100px';
+    img.style.display = 'inline-block';
     link.appendChild(img);
     tagline.parentNode.insertBefore(link, tagline.nextSibling);
   }
