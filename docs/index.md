@@ -21,6 +21,21 @@ document.addEventListener('DOMContentLoaded', function() {
     link.appendChild(img);
     tagline.parentNode.insertBefore(link, tagline.nextSibling);
   }
+
+  // Fade-in on scroll
+  var targets = document.querySelectorAll('.hero-section, .summary-grid, .summary-item, .pipeline-steps, .step, .results-table, .note-box, .viz-container, .viz-item, .tech-detail, .links-section, .portfolio-banner, .footer-section, h2, h3');
+  targets.forEach(function(el) { el.classList.add('fade-target'); });
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  targets.forEach(function(el) { observer.observe(el); });
 });
 </script>
 

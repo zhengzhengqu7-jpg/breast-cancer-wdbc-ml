@@ -624,3 +624,15 @@ ol li, ul li {
     grid-template-columns: 1fr;
   }
 }
+
+/* === Fade-in on Scroll === */
+.fade-target {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
